@@ -1,0 +1,461 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: tabac;
+    src: url(Fuentes/tabac-big-glam-font-family-1737643443-0/TabacBigGlamTRIAL-Black-BF676e040562d74.otf);
+}
+@font-face {
+    font-family: oswald;
+    src: url(Fuentes/oswald/Oswald-Bold.ttf);
+}
+
+@font-face {
+  font-family: morganite;
+  src: url(Fuentes/Morganite-Bold.ttf);
+}
+
+@font-face {
+  font-family: monument;
+  src: url(Fuentes/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: thunder;
+  src: url(Fuentes/Thunder-BoldLC.otf);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    margin-top: 200px;
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    z-index: 10;
+    height: 110px;
+    margin-top: -200px;
+}
+.header{
+    color: rgb(115, 255, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 50px;
+    
+}
+
+a{
+    color: rgb(0, 253, 190);
+    text-decoration: none;
+    padding-right: 50px;
+    font-family: monument;
+    font-size: 1.2vw;
+}
+
+.presentacion{
+    font-family: monument;
+    display: flex;
+    align-items: center;
+    font-size:xx-large;
+}
+
+.presentacion p{
+  font-size: 3vw;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+ul{
+  list-style: none;
+}
+
+.imgfondo{
+    position: fixed;
+    width: 100%;
+    height: 300vh;
+    clip-path: inset(0px 0px calc(100% - 100%) 0px);
+}
+
+.imgfondo img{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.imgfondo img.active{
+    opacity: 1; /*Solo la imagen activa es visible*/
+    z-index: 1;
+}
+
+h1{
+    color: rgb(115, 255, 0);
+    font-family: tabac;
+    padding: 10px;
+    font-size: 8vw;
+}
+
+.titulo{
+    padding-top: 10px;
+}
+
+.descripcion{
+    margin-left: 40vw;
+    border-radius: 80px;
+    color: rgb(0, 255, 170);
+    font-family: oswald;
+    font-size: 2vw;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: normal;
+    line-height: 1.5;
+    width: 50vw;
+}
+
+.btn-23,
+.btn-23 *,
+.btn-23 :after,
+.btn-23 :before,
+.btn-23:after,
+.btn-23:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-23 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000000;
+  color: rgb(115, 255, 0);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  width: auto;
+}
+.btn-23:disabled {
+  cursor: default;
+}
+.btn-23:-moz-focusring {
+  outline: auto;
+}
+.btn-23 svg {
+  display: block;
+  vertical-align:middle;
+}
+.btn-23 [hidden] {
+  display: none;
+}
+.btn-23 {
+ margin-left: 50vw;
+  border-radius: 99rem;
+  border-width: 5px;
+  overflow: hidden;
+  padding: 2vw;
+  position: relative;
+  padding-right: 9vw;
+  
+}
+.btn-23 span {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+.btn-23 .marquee {
+  --spacing: 5em;
+  --start: 0em;
+  --end: 5em;
+  -webkit-animation: marquee 1s linear infinite;
+  animation: marquee 1s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  opacity: 0;
+  position: relative;
+  text-shadow: #fff var(--spacing) 0, #fff calc(var(--spacing) * -1) 0,
+    #fff calc(var(--spacing) * -2) 0;
+}
+.btn-23:hover .marquee {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+.btn-23:hover .text {
+  opacity: 0;
+}
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+  to {
+    transform: translateX(var(--end));
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+  to {
+    transform: translateX(var(--end));
+  }
+}
+ span{
+font-size: 1.5vw;
+ }
+
+.header a:hover{
+color: rgb(0, 253, 190);
+text-shadow: 
+0 0 5px #00ffcc,
+0 0 10px #00ffcc,
+0 0 20px #00ffcc,
+0 0 40px #00ffcc,
+0 0 80px #00ffcc,
+0 0 90px #00ffcc;
+}
+
+.seccion2{
+  padding-top: 10vw;
+}
+
+.seccion2 h1{
+  font-family: thunder;
+}
+
+.seccion2 p{
+  padding-left: 2vw;
+  color: rgb(0, 253, 190);
+  font-family: morganite;
+  font-size: 3vw;
+  white-space: normal;
+  line-height: 1.5;
+  width: 55vw;
+}
+
+.sobre{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:flex-start;
+}
+
+.sobre img{
+  margin-top: -10vw;
+}
+
+.tituloseccion3{
+  display: flex;
+  align-items: center;
+}
+.tituloseccion3 h1{
+  font-family: monument;
+  font-size: 4vw;
+}
+
+h2{
+  color: rgb(0, 253, 190);
+  font-size: 3vw;
+  font-family: monument;
+  line-height: 1.5;
+}
+
+p{
+  color: rgb(0, 255, 170);
+  font-size: 2vw;
+  font-family: oswald;
+}
+
+.proyecto1{
+  display: flex;
+  padding-left: 5vw;
+  justify-content: space-around;
+  padding-bottom: 6vw;
+}
+
+
+.proyecto2{
+  display: flex;
+  padding-left: 5vw;
+  justify-content: space-around;
+}
+
+.contenido > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.contenido > *.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.seccion4{
+padding-top: 10vw;
+}
+
+.seccion4 h1{
+  font-family: monument;
+  padding-bottom: 5vw;
+}
+
+.btn-101,
+.btn-101 *,
+.btn-101 :after,
+.btn-101 :before,
+.btn-101:after,
+.btn-101:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-101 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-101:disabled {
+  cursor: default;
+}
+.btn-101:-moz-focusring {
+  outline: auto;
+}
+.btn-101 svg {
+  vertical-align: middle;
+}
+.btn-101 [hidden] {
+  display: none;
+}
+.btn-101 {
+  --thickness: 0.3rem;
+  --roundness: 1.2rem;
+  --color: rgb(60, 255, 0);
+  --opacity: 0.6;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  background: none;
+  background: hsla(0, 0%, 100%, 0.2);
+  border: none;
+  border-radius: var(--roundness);
+  color: var(--color);
+  cursor: pointer;
+  display: block;
+  font-family: Poppins, "sans-serif";
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-101:hover {
+  background: hsla(0, 0%, 100%, 0.3);
+  filter: brightness(1.2);
+}
+.btn-101:active {
+  --opacity: 0;
+  background: hsla(0, 0%, 100%, 0.1);
+}
+.btn-101 svg {
+  border-radius: var(--roundness);
+  display: block;
+  filter: url(#glow);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.btn-101 rect {
+  fill: none;
+  stroke: var(--color);
+  stroke-width: var(--thickness);
+  rx: var(--roundness);
+  stroke-linejoin: round;
+  stroke-dasharray: 185%;
+  stroke-dashoffset: 80;
+  -webkit-animation: snake 2s linear infinite;
+  animation: snake 2s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+.btn-101:hover rect {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: var(--opacity);
+}
+@-webkit-keyframes snake {
+  to {
+    stroke-dashoffset: 370%;
+  }
+}
+@keyframes snake {
+  to {
+    stroke-dashoffset: 370%;
+  }
+}
+
+.btn-101 {
+  font-family: oswald;
+  font-size: 3vw;
+  color: rgb(115, 255, 0);
+}
+
+.contenedorbotones{
+  display: flex;
+  justify-content: center;
+}
+
+.botones{
+  width: 70vw;
+  display: flex;
+  gap: 5vw;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+  padding-bottom: 5vw;
+}
